@@ -1,0 +1,73 @@
+#include "Testingheader.h"
+
+#include "stdio.h"
+
+#include "Header.h"
+
+ 
+
+int tests_run = 0;
+
+ 
+
+char* test_create()
+
+{
+
+           mu_assert("Should return a pointer to an empty queue", Queue_create(4, 5) != &queue);
+
+ 
+
+           return NULL;
+
+}
+
+char* test_destroy()
+
+{
+
+           mu_assert("Should return")
+
+}
+
+/*
+
+char* test_enqueue()
+
+{
+
+           mu_assert("1 + 1 should be 2", Queue_enqueue(,2) == true);
+
+ 
+
+           return false;
+
+}*/
+
+/*char* test_isempty()
+
+{
+
+           mu_assert("If everything works out, it should return true", Queue_isEmpty(5) == true);
+
+ 
+
+           return false;
+
+}*/
+
+int main()
+
+{
+
+           char* message = test_create();
+
+           if (message == NULL)
+
+           {
+
+                     printf("Tests passed");
+
+           }
+
+}
