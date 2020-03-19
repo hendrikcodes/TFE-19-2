@@ -1,73 +1,67 @@
 #include "Testingheader.h"
-
 #include "stdio.h"
-
 #include "Header.h"
-
- 
 
 int tests_run = 0;
 
- 
 
 char* test_create()
-
 {
 
-           mu_assert("Should return a pointer to an empty queue", Queue_create(4, 5) != &queue);
+	Queue* q1 = Queue_create(1, sizeof(1));
+	mu_assert("Should return a pointer to an empty queue", q1!= NULL );
 
- 
-
-           return NULL;
-
+	return NULL;
 }
-
-char* test_destroy()
-
+char* test_dequeue()
 {
+	mu_assert("Should return true or false wether it worked", Queue_dequeue(4, 3) == true);
 
-           mu_assert("Should return")
+	return NULL;
 
 }
-
-/*
 
 char* test_enqueue()
-
 {
+	mu_assert("Should return true if the code works properly", Queue_enqueue(4,2) == true);
 
-           mu_assert("1 + 1 should be 2", Queue_enqueue(,2) == true);
+	return NULL;
+}
 
- 
-
-           return false;
-
-}*/
-
-/*char* test_isempty()
-
+char* test_isFULL()
 {
+	mu_assert("Should return true if the queue is full", Queue_isFull(5) == true);
+	return NULL;
+}
+char* test_isempty()
+{
+	mu_assert("If everything works out, it should return true", Queue_isEmpty(5) == true);
 
-           mu_assert("If everything works out, it should return true", Queue_isEmpty(5) == true);
+	return NULL;
+}
+char* test_capacity()
+{
+	mu_assert("should return the max capacity of the queue", Queue_capacity(4) == 4);
+	return NULL;
+}
 
- 
-
-           return false;
-
-}*/
+char* test_length()
+{
+	mu_assert("should return length of currently used queue", Queue_length(4) == 5);
+	return NULL;
+}
 
 int main()
-
 {
-
-           char* message = test_create();
-
-           if (message == NULL)
-
-           {
-
-                     printf("Tests passed");
-
-           }
-
+	char* message = test_create();
+	char* empty = test_isempty();
+	if(empty == NULL)
+	{
+		printf("empty funktioniert");
+		
+	}
+	if (message == NULL)
+	{
+		printf("Tests passed");
+	}
 }
